@@ -1,0 +1,65 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. The more detail you include, the faster we can fix it.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug. What did you expect to happen instead?
+      placeholder: "When I click Retry on a failed job, the job stays in 'failed' state..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to trigger the bug.
+      placeholder: |
+        1. Go to Jobs list
+        2. Click on a failed job
+        3. Click Retry
+        4. Observe that...
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of Sluice is affected?
+      options:
+        - Dashboard (web UI)
+        - SDK (Python pip package)
+        - Agent (Go data collector)
+        - API / Ingest
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: "SDK version, Agent version, Celery version, Python version"
+      placeholder: "sluice-sdk 0.1.0, agent 0.1.0, celery 5.4.0, python 3.11"
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How much does this impact your workflow?
+      options:
+        - "Critical — blocking production use"
+        - "High — major feature broken, workaround exists"
+        - "Medium — minor feature broken"
+        - "Low — cosmetic or minor annoyance"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Paste error messages, tracebacks, or screenshots. Redact any sensitive data (API keys, task arguments, PII).
+      render: shell
