@@ -23,4 +23,5 @@ You can also submit feedback directly from the Sluice dashboard — click the **
 ## Links
 
 - [Sluice](https://sluice.sh)
-- [Documentation](https://sluice.sh/docs)
+- [Documentation](https://docs.sluice.sh)
+- [Status Page](https://status.sluice.sh)
