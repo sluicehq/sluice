@@ -3,6 +3,3 @@ contact_links:
   - name: Documentation
     url: https://sluice.sh/docs
     about: Check our docs before opening an issue — your answer might already be there.
-  - name: Status Page
-    url: https://status.sluice.sh
-    about: Check if there's an active incident before reporting a bug.
